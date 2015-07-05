@@ -58,3 +58,9 @@ ruby -rubygems receive.rb
 
 
 ** tcp 5672-5673
+
+** rabbitmq on windows 2003
+
+rabbitmq on windows 2003
+
+54.177.39.200
