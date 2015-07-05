@@ -1,5 +1,5 @@
 receive.exe:
-	cmd /c ocra --console rabbitmq-tutorials/ruby/receive.rb
+	cmd /c ocra --no-dep-run rabbitmq-tutorials/ruby/receive.rb
 
 send.exe:
 	cmd /c ocra rabbitmq-tutorials/ruby/send.rb
