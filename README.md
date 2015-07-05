@@ -64,3 +64,11 @@ ruby -rubygems receive.rb
 rabbitmq on windows 2003
 
 54.177.39.200
+
+
+**
+
+conn = Bunny.new(:host => "localhost", :vhost => "myapp.production", :user => "bunny", :password => "t0ps3kret")
+conn.start
+
+http://rubybunny.info/articles/connecting.html
