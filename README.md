@@ -3,7 +3,10 @@
 choco install rabbitmq -yes --forcex86
 cd "c:\Program Files (x86)\RabbitMQ Server\rabbitmq_server-3.5.3\sbin"
 cmd /c rabbitmq-plugins.bat enable rabbitmq_management
+
+
 start http://localhost:15672
+credentials: guest / guest
 
 
 
