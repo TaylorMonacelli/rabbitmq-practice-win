@@ -72,3 +72,32 @@ conn = Bunny.new(:host => "localhost", :vhost => "myapp.production", :user => "b
 conn.start
 
 http://rubybunny.info/articles/connecting.html
+
+
+**
+
+[demo@demos-MacBook-Pro:~/pdev/rabbitmq-practice-win/rabbitmq-tutorials/ruby(master)]$ ruby receive.rb
+ruby receive.rb
+E, [2015-07-05T15:54:23.950355 #97381] ERROR -- #<Bunny::Session:70119599007360 guest@54.177.39.200:5672, vhost=/, hosts=[54.177.39.200]>: Authentication with RabbitMQ failed: 403 ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+/Library/Ruby/Gems/2.0.0/gems/bunny-1.7.0/lib/bunny/session.rb:986:in `open_connection': Authentication with RabbitMQ failed. Please check your connection settings. Username: guest, vhost: /, password length: 5 (Bunny::AuthenticationFailureError)
+	from /Library/Ruby/Gems/2.0.0/gems/bunny-1.7.0/lib/bunny/session.rb:280:in `start'
+	from receive.rb:7:in `<main>'
+[demo@demos-MacBook-Pro:~/pdev/rabbitmq-practice-win/rabbitmq-tutorials/ruby(master)]$
+
+**
+
+http://www.rabbitmq.com/configure.html
+
+Location of rabbitmq.config and rabbitmq-env.conf
+The location of these files is distribution-specific. By default, they are not created, but expect to be located in the following places on each platform:
+
+Generic UNIX - $RABBITMQ_HOME/etc/rabbitmq/
+Debian - /etc/rabbitmq/
+RPM - /etc/rabbitmq/
+Mac OS X (Homebrew) - ${install_prefix}/etc/rabbitmq/, the Homebrew prefix is usually /usr/local
+Windows - %APPDATA%\RabbitMQ\
+
+
+** rabbitmq access control
+
+https://www.rabbitmq.com/access-control.html
