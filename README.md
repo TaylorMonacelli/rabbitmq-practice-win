@@ -55,3 +55,6 @@ https://www.rabbitmq.com/tutorials/tutorial-one-ruby.html
 ruby -rubygems send.rb
 
 ruby -rubygems receive.rb
+
+
+** tcp 5672-5673
