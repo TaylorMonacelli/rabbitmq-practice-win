@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-bunny ">= 1.6.0"
+gem 'bunny' '>=1.6.0'
