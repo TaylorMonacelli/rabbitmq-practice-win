@@ -47,3 +47,11 @@ Applying plugin configuration to rabbit@TL3... started 6 plugins.
 [Administrator@tl3:/c/Program Files (x86)/RabbitMQ Server/rabbitmq_server-3.5.3/sbin(master)]$
 
 cmd /c rabbitmq-plugins.bat enable rabbitmq_management
+
+**
+
+https://www.rabbitmq.com/tutorials/tutorial-one-ruby.html
+
+ruby -rubygems send.rb
+
+ruby -rubygems receive.rb
