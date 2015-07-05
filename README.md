@@ -3,3 +3,5 @@
 http://localhost:15672
 
 https://www.rabbitmq.com/tutorials/tutorial-one-ruby.html
+
+gem install bunny --version ">= 1.6.0"
