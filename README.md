@@ -236,3 +236,19 @@ E, [2015-07-05T17:04:32.046037 #2562] ERROR -- #<Bunny::Session:70135173653620 t
 	from /Library/Ruby/Gems/2.0.0/gems/bunny-1.7.0/lib/bunny/session.rb:280:in `start'
 	from receive.rb:10:in `<main>'
 [demo@demos-MacBook-Pro:~/pdev/rabbitmq-practice-win/rabbitmq-tutorials/ruby(master)]$
+
+** useful file paths
+
+C:\Program Files\RabbitMQ Server\rabbitmq_server-3.5.3\sbin
+C:\Documents and Settings\Administrator\Application Data\RabbitMQ\log
+C:\Documents and Settings\Administrator\Application Data\RabbitMQ\db\rabbit@AMAZON-672471FC-mnesia
+
+This
+
+If copy rabbitmq.config.example from here:
+C:\Documents and Settings\Administrator\Application Data\RabbitMQ\rabbitmq.config.example
+
+to here:
+C:\Documents and Settings\Administrator\Application Data\RabbitMQ\rabbitmq.config
+
+Then rabbitmq didn't use it.
