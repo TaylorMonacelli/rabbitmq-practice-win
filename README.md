@@ -1,5 +1,7 @@
 # rabbitmq-practice-win
 
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+rem this will install erlang and rabbitmq.  erlang is rabbitmq's dependency:
 choco install rabbitmq -yes --forcex86
 cd "c:\Program Files (x86)\RabbitMQ Server\rabbitmq_server-3.5.3\sbin"
 cmd /c rabbitmq-plugins.bat enable rabbitmq_management
