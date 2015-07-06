@@ -288,3 +288,13 @@ Then rabbitmq didn't use it.
 **
 
 https://github.com/rabbitmq/rabbitmq-tutorials.git
+
+
+
+**
+
+http://www.rabbitmq.com/tutorials/tutorial-six-ruby.html
+
+ruby -rubygems rpc_client.rb
+ruby -rubygems rpc_server.rb
+

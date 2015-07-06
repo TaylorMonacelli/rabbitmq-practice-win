@@ -77,8 +77,8 @@ end
 
 
 client   = FibonacciClient.new(ch, "rpc_queue")
-puts " [x] Requesting fib(30)"
-response = client.call(30)
+puts " [x] Requesting fib(40)"
+response = client.call(40)
 puts " [.] Got #{response}"
 
 ch.close
