@@ -55,7 +55,7 @@ Applying plugin configuration to rabbit@TL3... started 6 plugins.
 
 cmd /c rabbitmq-plugins.bat enable rabbitmq_management
 
-**
+** 
 
 https://www.rabbitmq.com/tutorials/tutorial-one-ruby.html
 
@@ -73,15 +73,14 @@ rabbitmq on windows 2003
 54.177.39.200
 
 
-**
+** 
 
 conn = Bunny.new(:host => "localhost", :vhost => "myapp.production", :user => "bunny", :password => "t0ps3kret")
 conn.start
 
 http://rubybunny.info/articles/connecting.html
 
-
-**
+** ruby receive.rb 403 ACCESS_REFUSED
 
 [demo@demos-MacBook-Pro:~/pdev/rabbitmq-practice-win/rabbitmq-tutorials/ruby(master)]$ ruby receive.rb
 ruby receive.rb
@@ -252,3 +251,7 @@ to here:
 C:\Documents and Settings\Administrator\Application Data\RabbitMQ\rabbitmq.config
 
 Then rabbitmq didn't use it.
+
+**
+
+https://github.com/rabbitmq/rabbitmq-tutorials.git
