@@ -1,19 +1,42 @@
 # rabbitmq-practice-win
 
+netsh firewall set opmode mode=DISABLE profile=ALL
+netsh firewall set opmode mode=DISABLE
+
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 rem this will install erlang and rabbitmq.  erlang is rabbitmq's dependency:
 choco install rabbitmq -yes --forcex86
+choco install sysinternals -yes
 cd "c:\Program Files (x86)\RabbitMQ Server\rabbitmq_server-3.5.3\sbin"
-cmd /c rabbitmq-plugins.bat enable rabbitmq_management
 
-pathed -a "C:\Program Files\RabbitMQ Server\rabbitmq_server-3.5.3\sbin"
+
+pathed -s -a "C:\Program Files\RabbitMQ Server\rabbitmq_server-3.5.3\sbin"
+pathed -s -a "C:\Program Files (x86)\RabbitMQ Server\rabbitmq_server-3.5.3\sbin"
 
 rabbitmqctl add_user taylor taylor
 rabbitmqctl set_permissions -p / taylor ".*" ".*" ".*"
 rabbitmqctl delete_user taylor taylor
 
+rabbitmqctl add_user bob bob
+rabbitmqctl set_permissions -p / bob ".*" ".*" ".*"
+rabbitmqctl delete_user bob bob
+
+rabbitmqctl add_user john john
+rabbitmqctl set_permissions -p / john ".*" ".*" ".*"
+rabbitmqctl delete_user john john
+
+rabbitmqctl add_user paul paul
+rabbitmqctl set_permissions -p / paul ".*" ".*" ".*"
+rabbitmqctl delete_user paul paul
 
 
+
+
+
+rem enable rabbitmq management console
+pathed -s -a "C:\Program Files\RabbitMQ Server\rabbitmq_server-3.5.3\sbin"
+pathed -s -a "C:\Program Files (x86)\RabbitMQ Server\rabbitmq_server-3.5.3\sbin"
+rabbitmq-plugins enable rabbitmq_management
 start http://localhost:15672
 credentials: guest / guest
 
@@ -239,6 +262,12 @@ E, [2015-07-05T17:04:32.046037 #2562] ERROR -- #<Bunny::Session:70135173653620 t
 [demo@demos-MacBook-Pro:~/pdev/rabbitmq-practice-win/rabbitmq-tutorials/ruby(master)]$
 
 ** useful file paths
+
+C:\Program Files (x86)\RabbitMQ Server\rabbitmq_server-3.5.3\sbin
+%appdata%\RabbitMQ\log
+%appdata%\RabbitMQ\db\
+C:\Documents and Settings\Administrator\Application Data\RabbitMQ\db\rabbit@AMAZON-672471FC-mnesia
+
 
 C:\Program Files\RabbitMQ Server\rabbitmq_server-3.5.3\sbin
 C:\Documents and Settings\Administrator\Application Data\RabbitMQ\log
