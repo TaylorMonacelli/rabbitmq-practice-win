@@ -3,6 +3,8 @@
 netsh firewall set opmode mode=DISABLE profile=ALL
 netsh firewall set opmode mode=DISABLE
 
+open firwall for tcp 5672-5673
+
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 rem this will install erlang and rabbitmq.  erlang is rabbitmq's dependency:
 choco install rabbitmq -yes --forcex86
