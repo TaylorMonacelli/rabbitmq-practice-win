@@ -179,9 +179,9 @@ $ rabbitmqctl set_permissions -p / yourName ".*" ".*" ".*"
 Set the administrator tag for this user (to enable him access the management pluggin)
 $ rabbitmqctl set_user_tags yourName administrator
 
-... and you are ready to login to your rabbitmq management gui using yourName and yourPass from any browser by pointing it to http://"*********":15672 where ***** is your server IP hope it helps...
-
-
+... and you are ready to login to your rabbitmq management gui using
+yourName and yourPass from any browser by pointing it to
+http://"*********":15672 where ***** is your server IP hope it helps...
 
 **
 
